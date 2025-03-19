@@ -119,10 +119,3 @@ print(h)  # Ausgabe: x: -2, y: 4, z: -2
 
 i = a.normalize()
 print(i)  # Ausgabe: x: 0.6, y: 0.8, z: 0.4
-
-# Testen der setX-Methode
-a = Vector3(3, 4, 2)
-print(f"Vor dem Setzen: {a}")  # Ausgabe: x: 3, y: 4, z: 2
-
-a.setX(10)
-print(f"Nach dem Setzen: {a}")  # Ausgabe: x: 10, y: 4, z: 2
