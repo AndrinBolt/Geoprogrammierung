@@ -27,6 +27,7 @@ class Kreis(Figur):
 
 k = Kreis(Punkt(2, 3), 4)
 print(k.Umfang())
+print(k)
 
 class Dreieck(Figur):
     def __init__(self, d1, d2, d3):
@@ -46,6 +47,7 @@ class Dreieck(Figur):
 
 d = Dreieck(Punkt(1, 1), Punkt(3, 1), Punkt(2, 3))
 print(d.Umfang())
+print(d)
 
 class Rechteck(Figur):
     def __init__(self, r1, r2):
@@ -63,6 +65,7 @@ class Rechteck(Figur):
 
 r = Rechteck(Punkt(1, 1), Punkt(3, 3))
 print(r.Umfang())
+print(r)
 
 class Polygon(Figur):
     def __init__(self, points):
@@ -78,9 +81,11 @@ class Polygon(Figur):
         return u
     
     def __str__(self):
-        s = f"{self.name}" + " "
+        s = f"{self.name} "
         for p in self.points:
-            s += f"({p.x} - {p.y}) - "
+            s += f"({p.x}, {p.y}) - "
+        return s[:-3]
 
-p = Polygon([Punkt(1, 1), Punkt(3, 1), Punkt(3, 3), Punkt(1, 3)])
+p = Polygon([Punkt(1, 1), Punkt(3, 1), Punkt(3, 3)])
 print(p.Umfang())
+print(p)
