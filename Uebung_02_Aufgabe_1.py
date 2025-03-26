@@ -119,3 +119,9 @@ print(h)  # Ausgabe: x: -2, y: 4, z: -2
 
 i = a.normalize()
 print(i)  # Ausgabe: x: 0.6, y: 0.8, z: 0.4
+
+
+def dot(self, dVector):
+    if not type (dVector) == Vector3:
+        raise TypeError("dVector is not a Vector3")
+    return self.x * dVector.x + self.y * dVector.y + self.z * dVector.z
